@@ -1,0 +1,85 @@
+html,
+		body {
+			height: 100%;
+		}
+
+		body {
+			margin: 0;
+		}
+
+		.pageGridArea {
+			display: grid;
+			height: 100vh;
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: 100px 400px auto 50px;
+		}
+
+		.header {
+			grid-column: 1 / 13;
+			background-color: lightgray;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.main {
+			grid-column: 3 / 11;
+			grid-row: 2 / span 2;
+			transition: 500ms;
+		}
+
+		.footer {
+			grid-column: 1 / 13;
+			background-color: lightgray;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.modals {
+			opacity: 0;
+			grid-column: 4 / 10;
+			grid-row: 2 / 2;
+			transition: 500ms;
+		}
+
+		.modalHeader {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #789;
+		}
+
+		.modalHeader>h2 {
+			margin-left: 10px;
+		}
+
+		.modalHeader>button {
+			margin-right: 10px;
+		}
+
+		.modalBody {
+			overflow-y: auto;
+			background-color: #c9c9c9;
+			padding: 10px;
+		}
+
+		.modalFooter {
+			background-color: #789;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		button {
+			background: #000;
+			color: #eee;
+			border: none;
+			border-radius: 10px;
+			font-weight: 700;
+			padding: 10px;
+		}
+
+		button:hover {
+			cursor: pointer;
+		}
